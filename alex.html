@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Alex</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color:white;
+      min-height:100vh;
+    }
+
+    header{
+      text-align:center;
+      padding:60px 20px;
+    }
+
+    header h1{
+      font-size:3rem;
+      color:#ef4444;
+      margin-bottom:10px;
+    }
+
+    header p{
+      color:#cbd5e1;
+    }
+
+    header a{
+      color:#38bdf8;
+      text-decoration:none;
+    }
+
+    main{
+      max-width:1000px;
+      margin:auto;
+      padding:20px;
+    }
+
+    section{
+      background:rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      border-radius:20px;
+      padding:25px;
+      margin-bottom:25px;
+      transition:0.3s;
+    }
+
+    section:hover{
+      transform:translateY(-5px);
+    }
+
+    h2{
+      color:#ef4444;
+      margin-bottom:15px;
+    }
+
+    .skills-container{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    .skill-tag{
+      background:#ef4444;
+      padding:10px 20px;
+      border-radius:30px;
+      font-weight:bold;
+    }
+
+    .project{
+      background:#1e293b;
+      padding:15px;
+      border-radius:15px;
+      margin-top:10px;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      color:#94a3b8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Salut, je suis Alex</h1>
+    <p>Passionné par les jeux video, la musique et le développement web.</p>
+    <br>
+    <a href="index.html">⬅ Retour à l'accueil</a>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>À propos de moi</h2>
+      <p>
+        Je m'appelle Alex et je découvre le développement web.
+        J'aime apprendre de nouvelles choses, jouer aux jeux vidéo,
+        écouter de la musique et créer mes propres projets.
+      </p>
+    </section>
+
+    <section>
+      <h2>Mes passions</h2>
+      <div class="skills-container">
+        <div class="skill-tag">Jeux vidéo</div>
+        <div class="skill-tag">Sport</div>
+        <div class="skill-tag">Musique</div>
+        <div class="skill-tag">Programmation</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Mes projets</h2>
+
+      <div class="project">
+        <h3>Portfolio personnel</h3>
+        <p>Création de mon premier site web pendant le bootcamp.</p>
+      </div>
+
+      <div class="project">
+        <h3>Apprentissage HTML/CSS</h3>
+        <p>Découvrir les bases du développement web.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 - Alex | Fait avec ❤️ et du code</p>
+  </footer>
+
+</body>
+</html>
