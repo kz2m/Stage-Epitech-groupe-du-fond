@@ -49,6 +49,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    document.querySelectorAll(".card img").forEach(image => {
+        image.addEventListener("click", () => {
+            image.classList.toggle("zoomed");
+        });
+    });
+
     const footerYear = document.getElementById("footer-year");
     if (footerYear) {
         footerYear.textContent = new Date().getFullYear();
