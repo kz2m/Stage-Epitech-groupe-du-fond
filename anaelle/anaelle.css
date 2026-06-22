@@ -1,0 +1,327 @@
+/* ==========================================================================
+   STYLE DE DÃ‰PART - BOOTCAMP WEB
+   Ce fichier contient tous les styles pour la page d'accueil commune
+   et les portfolios individuels des Ã©lÃ¨ves. Les variables CSS permettent
+   de personnaliser facilement les couleurs.
+   ========================================================================== */
+
+/* 1. VARIABLES DE COULEURS ET POLICES */
+:root {
+  /* Mode Sombre par dÃ©faut (Moderne, Sleek) */
+  --bg-color: #390a49;          /* Fond de la page (bleu ardoise trÃ¨s sombre) */
+  --bg-gradient: radial-gradient(circle at top, #cd88db 0%, #7364c6 100%);
+  --text-color: #000000;        /* Couleur du texte principal */
+  --text-muted: #000000;       /* Couleur du texte secondaire */
+  --primary-color: #f2bafc;     /* Couleur principale (violet/indigo) */
+  --primary-glow: rgba(179, 73, 200, 0.15);
+  --accent-color: #5d14c4;      /* Couleur d'accentuation (cyan/turquoise) */
+  --card-bg: rgba(190, 75, 203, 0.7); /* Fond des cartes (semi-transparent) */
+  --card-hover: rgba(53, 30, 59, 0.9);
+  --border-color: rgba(255, 255, 255, 0.08); /* Bordures discrÃ¨tes */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  
+  --font-family: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  --transition-speed: 0.3s;
+}
+
+/* Mode Clair alternatif - activÃ© par le JavaScript */
+[data-theme="light"] {
+  --bg-color: #f8fafc;          /* Fond de la page (blanc cassÃ©) */
+  --bg-gradient: linear-gradient(to bottom, #eff6ff, #f8fafc);
+  --text-color: #240f2a;        /* Texte sombre */
+  --text-muted: #83648b;       /* Texte secondaire gris */
+  --primary-color: #dd46e5;     /* Indigo plus prononcÃ© */
+  --primary-glow: rgba(79, 70, 229, 0.1);
+  --accent-color: #b208a4;      /* Cyan plus foncÃ© */
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-hover: rgba(255, 255, 255, 1);
+  --border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* 2. RE-INITIALISATION ET STYLES DE BASE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg-gradient);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Liens stylisÃ©s */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+/* 3. LAYOUT (EN-TÃŠTE, CONTENU PRINCIPAL, PIED DE PAGE) */
+header {
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+main {
+  flex: 1;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* 4. DESIGN DU PORTAIL ACCUEIL (index.html) */
+.welcome-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grille des portfolios d'Ã©lÃ¨ves */
+.grid-portfolios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Cartes Ã‰lÃ¨ves (Glassmorphism & animations) */
+.student-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform var(--transition-speed) cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow var(--transition-speed), 
+              border-color var(--transition-speed);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(8px);
+}
+
+.student-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 25px -5px var(--primary-glow);
+  background: var(--card-hover);
+}
+
+.student-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  border: 3px solid var(--border-color);
+}
+
+.student-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.student-bio {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  min-height: 48px; /* Assure une hauteur minimale Ã©gale pour l'alignement */
+}
+
+/* Boutons stylisÃ©s */
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color) 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-speed), opacity var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px var(--primary-glow);
+  color: white;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-glow);
+  color: var(--primary-color);
+}
+
+/* 5. DESIGN DU PORTFOLIO INDIVIDUEL (exemple.html / prenom.html) */
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.hero-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: white;
+  box-shadow: var(--shadow-lg);
+  flex-shrink: 0;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Badges de compÃ©tences (Flexbox) */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.skill-tag {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform var(--transition-speed), border-color var(--transition-speed);
+}
+
+.skill-tag:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-color);
+  background: var(--card-hover);
+}
+
+/* Sections du portfolio */
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* SÃ©parateur Ã©lÃ©gant */
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(to right, var(--border-color), transparent);
+}
+
+/* 6. CONTRÃ”LE DE THÃˆME (BOUTON MODE SOMBRE) */
+.theme-toggle-container {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.theme-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color var(--transition-speed);
+}
+
+.theme-btn:hover {
+  background: var(--card-hover);
+}
