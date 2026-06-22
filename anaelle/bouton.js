@@ -1,11 +1,11 @@
 /* Compteur de clics personnalisé*/
-let nbLikes = 0;
+let nbLikes = Number(localStorage.getItem("nblikes")) || 0;
 const boutonLike = document.getElementById("mon-bouton-like");
 
+boutonLike.textContent = `❤(${nbLikes})`;
 
-if (boutonLike) {
-    boutonLike.addEventListener("click", ()  => {
-        nbLikes = nbLikes + 1
-        boutonLike.textContent = "❤ J'aime (${nbLikes})"
-    });
-}
+boutonLike.addEventListener("click", ()  => {
+    nbLikes++;
+    localStorage.setItem("nblikes", nbLikes);
+    boutonLike.textContent = `❤(${nbLikes})`;
+});
