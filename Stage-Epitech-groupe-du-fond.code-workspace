@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../moi"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Stage-Epitech-groupe-du-fond"
+	}
+}
