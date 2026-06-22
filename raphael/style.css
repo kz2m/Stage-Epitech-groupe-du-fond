@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Fond noir moderne */
+    color: #e0e0e0; /* Texte clair */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1f1c2c, #928dab); /* Dégradé stylé */
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+/* Section À Propos */
+.about {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.about h2 {
+    color: #00adb5; /* Couleur d'accentuation */
+    margin-bottom: 15px;
+}
+
+/* Section Passions (Cards) */
+.passions {
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+}
+
+.passions h2 {
+    text-align: center;
+    color: #00adb5;
+    margin-bottom: 25px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* S'adapte aux téléphones */
+}
+
+.card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Petit effet de survol */
+    border-color: #00adb5;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+footer a {
+    color: #00adb5;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+} 
+<style>
+  :root {
+    --primary-color: #4f46e5; /* Violet moderne, change-le selon ton thème */
+    --text-color: #334155;
+    --bg-card: #ffffff;
+    --line-color: #cbd5e1;
+  }
+Voici le CSS mis à jour. J'ai configuré les textes pour qu'ils soient écrits en blanc, et j'ai ajouté un fond sombre transparent aux petits blocs pour que tout reste parfaitement lisible, peu importe la couleur du fond de ton site.
+
+Remplace ton CSS actuel par celui-ci :
+
+HTML
+<style>
+  /* 1. RÈGLES GÉNÉRALES */
+  .weekly-schedule {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    color: #ffffff; /* Tout le texte de base en blanc */
+  }
+
+  /* Titres */
+  .section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ffffff; /* Titre principal en blanc */
+    margin-bottom: 8px;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    color: #e2e8f0; /* Sous-titre en blanc légèrement grisé */
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  /* 2. LA LIGNE DE LA FRISE (TIMELINE) */
+  .timeline {
+    position: relative;
+    border-left: 2px solid #ffffff; /* Ligne verticale blanche */
+    margin-left: 20px;
+    padding-left: 25px;
+  }
+
+  /* Chaque jour de la semaine */
+  .timeline-item {
+    position: relative;
+    margin-bottom: 35px;
+  }
+
+  /* Les petits points sur la ligne */
+  .timeline-dot {
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffffff; /* Points blancs */
+  }
+
+  /* 3. LE CONTENU DE CHAQUE JOUR */
+  .timeline-date {
+    font-weight: bold;
+    color: #38bdf8; /* Un joli bleu clair lumineux pour faire ressortir les jours */
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  /* Petit fond sombre pour que le blanc se lise bien si ton fond général est clair */
+  .timeline-content {
+    background: rgba(255, 255, 255, 0.05); /* Léger fond transparent */
+    padding: 15px;
+    border-radius: 6px;
+  }
+
+  .timeline-content h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.15rem;
+    color: #ffffff; /* Titre de l'activité en blanc */
+  }
+
+  .timeline-content p {
+    margin: 0;
+    color: #f1f5f9; /* Description en blanc très clair */
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+</style>
