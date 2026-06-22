@@ -1,0 +1,41 @@
+* body {
+            background: linear-gradient(to right, #0eb4e6, #b412ff);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #000000; /* Couleur du texte */
+            text-align: left;
+        } 
+        
+        /* En-tête avec une bordure rose et texte blanc */
+        header {
+            background: linear-gradient(to right, #06495e, #43075f); /* Couleur rouge pour l'en-tête */
+            color: #ff000096; /* Texte rouge */
+            padding: 15px; /* Espace intérieur de l'en-tête */
+            border-bottom: 5px solid #000000; /* Bordure bleue en bas de l'en-tête */
+            text-align: center
+        }
+
+        /* Sections avec une bordure et un fond transparent */
+        section {
+			display:flex;
+            margin: 40px 60px; /* Espace autour de chaque section */
+            padding: 15px; /* Espace intérieur de chaque section */
+            border: 2px solid #4b000083; /* Bordure rose en pointillés */
+            border-radius: 15px; /* Coins arrondis */
+            background: rgba(255, 255, 255, 0.2); /* Fond transparent */
+            transition: transform 0.2s ease-in-out; /* Effet de transition pour le zoom */
+			
+        }
+
+        /* Effet zoom au survol de la souris */
+        section:hover {
+            transform: scale(1.05); /* Zoom 5% au survol */
+        }
+
+        /* Limiter le zoom sur les écrans plus petits */
+        @media (max-width: 768px) {
+            section:hover {
+                transform: none; /* Aucun zoom sur les écrans plus petits */
+            }
+        }
