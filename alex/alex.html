@@ -248,7 +248,7 @@ section {
 
 <nav>
 
-<div class="logo">Alex</div>
+<div class="logo">Portfolio Alex</div>
 
 <ul>
 <li><a href="#apropos">À propos</a></li>
@@ -262,17 +262,19 @@ section {
 
 <header>
 
-<h1>👋 Salut, moi c'est Alex</h1>
+<h1>Bonjour, je m'appelle Alex</h1>
 
 <p>
-Passionné par l'informatique, les jeux vidéo et les nouvelles technologies.
-Bienvenue sur mon portfolio réalisé durant mon stage chez Epitech.
+Je suis élève de seconde et j'ai réalisé ce portfolio pendant mon stage
+de découverte chez Epitech. Ce site présente ce que j'ai appris durant
+les deux semaines de stage ainsi que mes centres d'intérêt.
 </p>
 
 <a href="#stage" class="hero-btn">
 Découvrir ma semaine chez Epitech
 </a>
-
+<a href="../index.html" class="hero-btn">
+← Retour à l'accueil</a>
 </header>
 
 <main>
@@ -334,7 +336,61 @@ Durant cette semaine, j'ai découvert de nombreux domaines de l'informatique gr�
 </div>
 
 </div>
+<section id="semaine2" class="reveal">
 
+<h2>Ma deuxième semaine chez Epitech</h2>
+
+<p>
+Lors de cette deuxième semaine, j'ai participé à plusieurs conférences
+et ateliers qui m'ont permis de découvrir différents métiers de l'informatique
+et de développer mes compétences.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>🤖 Conférence IA Google</h3>
+<p>
+Découverte de l'intelligence artificielle, de ses applications et de son
+utilisation dans les outils développés par Google.
+</p>
+</div>
+
+<div class="card">
+<h3>🚀 Atelier NASA</h3>
+<p>
+Présentation de projets technologiques utilisés dans le domaine spatial
+et découverte de certaines innovations développées pour l'exploration.
+</p>
+</div>
+
+<div class="card">
+<h3>🎮 Morpion IA</h3>
+<p>
+Création d'un jeu de morpion avec une intelligence artificielle capable
+de prendre des décisions automatiquement.
+</p>
+</div>
+
+<div class="card">
+<h3>💼 Orientation informatique</h3>
+<p>
+Découverte des différentes spécialisations et métiers possibles dans le
+secteur de l'informatique.
+</p>
+</div>
+
+<div class="card">
+<h3>📂 Portfolio</h3>
+<p>
+Amélioration de mon portfolio personnel et ajout des activités réalisées
+pendant le stage.
+</p>
+</div>
+
+</div>
+
+</section>
 </section>
 
 <section id="passions" class="reveal">
@@ -416,9 +472,7 @@ HTML, CSS, JavaScript, GitHub
 <p>💻 GitHub : Stage-Epitech-groupe-du-fond</p>
 
 </section>
-
 </main>
-
 <footer>
 2026 - Alex | Portfolio Stage Epitech
 </footer>
@@ -437,7 +491,7 @@ function scrollToSection(id) {
     });
 }
 
-/* NAVBAR */
+
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -446,7 +500,7 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-/* HERO BUTTON */
+
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -455,7 +509,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-/* LIKE BUTTON */
+
 let likes = 0;
 const btn = document.getElementById("likeBtn");
 
@@ -464,7 +518,7 @@ btn.addEventListener("click", () => {
     btn.textContent = `❤️ J'aime (${likes})`;
 });
 
-/* PASSIONS TOGGLE */
+
 function toggle(id) {
     const sections = document.querySelectorAll(".info-box");
 
@@ -483,7 +537,7 @@ function toggle(id) {
     }
 }
 
-/* REVEAL ANIMATION */
+
 function reveal() {
     const reveals = document.querySelectorAll(".reveal");
 
