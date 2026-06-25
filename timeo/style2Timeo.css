@@ -5,7 +5,15 @@
             font-family: Arial, sans-serif;
             color: #000000; /* Couleur du texte */
             text-align: left;
-        } 
+
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
         
         /* En-tête avec une bordure rose et texte blanc */
         header {
@@ -39,3 +47,14 @@
                 transform: none; /* Aucun zoom sur les écrans plus petits */
             }
         }
+        .emploi-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.emploi {
+    text-align: center;
+}
+
